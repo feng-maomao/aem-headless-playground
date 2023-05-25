@@ -11,7 +11,6 @@ export const fetchBeverages = async (): Promise<Beverage[]> => {
   }/beverages-all`;
   try {
     const res = await axios.get<BeverageResponse>(url);
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     return res.data.data.beverageList.items;
   } catch (error) {
     console.error(error);
