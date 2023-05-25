@@ -10,9 +10,9 @@ export const NOT_FOUND_IMAGE: PrimaryImage = {
 
 export const NOT_FOUND_BEVERAGE_DETAIL: BeverageDetail = {
   slug: "",
-  title: "",
+  title: "NOT FOUND",
   price: 0,
-  description: { plaintext: "" },
+  description: { plaintext: "This drink does not exist" },
   primaryImage: NOT_FOUND_IMAGE,
   flavor: "",
 };

@@ -1,5 +1,5 @@
 import { fetchBeverages } from "@/app/page";
-import Badge from "@/components/atoms/Badge";
+import { Badge } from "@/components/atoms/Badge";
 import { NOT_FOUND_BEVERAGE_DETAIL } from "@/constants/null-constants";
 import { BeverageDetail } from "@/interfaces/beverage-detail";
 import { BeverageResponse } from "@/interfaces/responses/beverage-response";
@@ -48,15 +48,13 @@ const BeverageDetails = async ({ params }: { params: { slug: string } }) => {
           )}
           <p className="mt-4 text-gray-500">{description.plaintext}</p>
         </div>
-        {primaryImage && (
-          <Image
-            src={`${NEXT_PUBLIC_AEM_HOST}${primaryImage._path}`}
-            alt={title}
-            width={primaryImage.width}
-            height={primaryImage.height}
-            className="rounded-lg bg-gray-100"
-          />
-        )}
+        <Image
+          src={`${NEXT_PUBLIC_AEM_HOST}${primaryImage._path}`}
+          alt={title}
+          width={primaryImage.width}
+          height={primaryImage.height}
+          className="rounded-lg bg-gray-100"
+        />
       </div>
     </div>
   );
